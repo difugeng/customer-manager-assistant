@@ -3,6 +3,10 @@ defineProps({
   customer: {
     type: Object,
     required: true
+  },
+  bgClass: {
+    type: String,
+    default: 'bg-white'
   }
 })
 
@@ -11,7 +15,8 @@ defineEmits(['click'])
 
 <template>
   <div 
-    class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-gray-100/50 cursor-pointer hover:shadow-md transition-shadow duration-200"
+    class="p-4 rounded-2xl rounded-tl-none shadow-sm border border-gray-100/50 cursor-pointer hover:shadow-md transition-shadow duration-200"
+    :class="bgClass"
     @click="$emit('click')"
   >
     <div class="flex items-center gap-2 mb-3">
